@@ -1,4 +1,6 @@
-from pathlib import Path
+TO TEST LOGGER
+
+```from pathlib import Path
 from projectFiles.utils.common import read_yaml, create_directories, save_json, load_json
 import logging
 
@@ -31,3 +33,4 @@ except Exception as e:
     logging.error(f"Test failed: {e}")
 
 print("\nCheck the logs in 'logs/project.log' for details.")
+```
