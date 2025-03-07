@@ -1,5 +1,9 @@
 # Byte-compiled / optimized / DLL files
+<<<<<<< HEAD
 _pycache/
+=======
+__pycache__/
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 *.py[cod]
 *$py.class
 
@@ -7,7 +11,10 @@ _pycache/
 *.so
 
 # Distribution / packaging
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 .Python
 build/
 develop-eggs/
@@ -15,7 +22,10 @@ dist/
 downloads/
 eggs/
 .eggs/
+<<<<<<< HEAD
 _init_py
+=======
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 lib/
 lib64/
 parts/
@@ -28,9 +38,15 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+<<<<<<< HEAD
 #PyInstaller
 # Usually these files are written by a python script from a template 
 # before PyInstaller builds the exe, so as to inject date/other infos into it.
+=======
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 *.manifest
 *.spec
 
@@ -48,7 +64,11 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+<<<<<<< HEAD
 *.py, cover
+=======
+*.py,cover
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 .hypothesis/
 .pytest_cache/
 cover/
@@ -73,7 +93,11 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+<<<<<<< HEAD
 # PyBuilder 
+=======
+# PyBuilder
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 .pybuilder/
 target/
 
@@ -89,7 +113,10 @@ ipython_config.py
 #   intended to run in multiple environments; otherwise, check them in:
 # .python-version
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
 #   However, in case of collaboration, if having platform-specific dependencies or dependencies
@@ -99,28 +126,55 @@ ipython_config.py
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version contro
+# UV
+#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#uv.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 #poetry.lock
 
 # pdm
+<<<<<<< HEAD
 #   Similar to Pipfile.lock, it is generally recommended to include pdm-lock in version control.
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
+=======
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+.pdm.toml
+.pdm-python
+.pdm-build/
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
+<<<<<<< HEAD
 elerybeat-schedule
 celerybeat.pid
 
 # SageMath parsed files
 .sage.py
+=======
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 
 # Environments
 .env
@@ -141,7 +195,11 @@ venv.bak/
 # mkdocs documentation
 /site
 
+<<<<<<< HEAD
 # myру
+=======
+# mypy
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
 .mypy_cache/
 .dmypy.json
 dmypy.json
@@ -156,6 +214,7 @@ dmypy.json
 cython_debug/
 
 # PyCharm
+<<<<<<< HEAD
 # JetBrains specific template is maintained in a separate JetBrains.gitignore that can https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 # be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 # and can be added to the global gitignore or merged into this file. For a more nuclear
@@ -165,3 +224,13 @@ cython_debug/
 artifacts/*
 
 raw_data.zip
+=======
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+# PyPI configuration file
+.pypirc
+>>>>>>> dc2e7695eb9fb2640963888700c593ea33cb5462
