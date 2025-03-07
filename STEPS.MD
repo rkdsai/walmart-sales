@@ -44,3 +44,32 @@ except Exception as e:
 
 print("\nCheck the logs in 'logs/project.log' for details.")
 ```
+
+raw file updated from github
+
+updated 
+1. src\projectFiles\constants\__init__.py
+2. params.yaml
+3. schema.yaml
+
+tested in 
+1. research\data_ingestion.ipynb
+got output in artifacts
+1. data.zip
+2. features.csv.zip
+3. sampleSubmission.csv.zip
+4. stores.csv
+5. test.csv.zip
+6. train.csv.zip
+
+Implemented data ingestion in modular coding
+
+updated
+1. config.yaml
+2. Update schema.yaml
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline 
+8. Update the main.py
