@@ -47,6 +47,8 @@ print("\nCheck the logs in 'logs/project.log' for details.")
 
 raw file updated from github
 
+## Data Ingestion
+
 updated 
 1. src\projectFiles\constants\__init__.py
 2. params.yaml
@@ -73,3 +75,18 @@ updated
 6. Update the components
 7. Update the pipeline 
 8. Update the main.py
+
+## Data Validation
+
+tested in 
+1. research\data_ingestion.ipynb
+
+Implemented data validation in modular coding
+
+updated
+1. Update the entity
+2. Update the configuration manager in src config
+3. Update the components
+4. Update the pipeline 
+5. Update the main.py
+
