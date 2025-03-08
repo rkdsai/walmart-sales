@@ -40,3 +40,14 @@ class ModelTrainerConfig:
     n_estimators: int
     learning_rate: float
     target_column: str
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    pipeline_path: Path 
+    model_instance_path: Path
+    all_params: dict
+    target_column: str
+    metrics_file_name: Path
+    mlflow_uri: str

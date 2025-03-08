@@ -104,3 +104,38 @@ updated
 3. Update the components
 4. Update the pipeline 
 5. Update the main.py
+
+## Model Trainer
+
+updated config/config.yaml 
+tested in 
+1. research\data_ingestion.ipynb
+
+Implemented data validation in modular coding
+
+updated
+1. Update the entity
+2. Update the configuration manager in src config
+3. Update the components
+4. Update the pipeline 
+5. Update the main.py
+
+## Model Evaluation
+
+dagshub connected with github repo
+url, username, password updated
+to track model on mlflow
+
+updated config/config.yaml 
+tested in 
+1. research\data_ingestion.ipynb
+
+Implemented data validation in modular coding
+
+updated
+1. Update the entity
+2. Update the configuration manager in src config
+3. Update the components
+4. Update the pipeline 
+5. Update the main.py
+

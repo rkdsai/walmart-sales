@@ -1,6 +1,6 @@
 from projectFiles.constants import *
 from projectFiles.utils.common import read_yaml, create_directories
-from projectFiles.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
+from projectFiles.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig, ModelEvaluationConfig
 
 class ConfigurationManager:
     def __init__(self, config_filepath = CONFIG_FILE_PATH, params_filepath = PARAMS_FILE_PATH, schema_filepath = SCHEMA_FILE_PATH):
@@ -76,3 +76,23 @@ class ConfigurationManager:
             learning_rate = params.learning_rate
         )
         return model_trainer_config
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.LGBMRegressor
+        schema = self.schema
+
+        create_directories([config.root_dir])
+        
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir = config.root_dir,
+            test_data_path = config.test_data_path,
+            pipeline_path = config.pipeline_path,
+            model_instance_path = config.model_instance_path,
+            all_params = params,
+            metrics_file_name = config.metrics_file_name,
+            target_column = schema.TARGET_COLUMN.name,
+            mlflow_uri = "https://dagshub.com/ravikiran058/walmart-sales.mlflow"
+        )
+
+        return model_evaluation_config
