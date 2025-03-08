@@ -29,3 +29,14 @@ class DataTransformationConfig:
         'train': Path,
         'test': Path
     })
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    train_data_path: Path
+    test_data_path: Path 
+    pipeline_name: str
+    model_instance_name: str
+    n_estimators: int
+    learning_rate: float
+    target_column: str

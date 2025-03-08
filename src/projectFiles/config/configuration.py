@@ -1,6 +1,6 @@
 from projectFiles.constants import *
 from projectFiles.utils.common import read_yaml, create_directories
-from projectFiles.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from projectFiles.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 
 class ConfigurationManager:
     def __init__(self, config_filepath = CONFIG_FILE_PATH, params_filepath = PARAMS_FILE_PATH, schema_filepath = SCHEMA_FILE_PATH):
@@ -57,3 +57,22 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        schema = self.schema
+        params = self.params.LGBMRegressor
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            train_data_path = config.train_data_path,
+            test_data_path = config.test_data_path,
+            target_column = config.target_column,
+            pipeline_name = config.pipeline_name,
+            model_instance_name = config.model_instance_name,
+            n_estimators = params.n_estimators,
+            learning_rate = params.learning_rate
+        )
+        return model_trainer_config

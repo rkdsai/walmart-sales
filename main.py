@@ -2,6 +2,8 @@ from src.projectFiles import logger
 from projectFiles.pipeline.stage1_data_ingestion import DataIngestionPipeline
 from projectFiles.pipeline.stage2_data_validation import DataValidationPipeline
 from projectFiles.pipeline.stage3_data_transformation import DataTransformationPipeline
+from projectFiles.pipeline.stage4_model_trainer import ModelTrainerPipeline
+
 
 def data_ingestion():
     STAGE_NAME = "Data Ingestion"
@@ -33,10 +35,21 @@ def data_transformation():
     except Exception as e:
         raise e
     
+def model_trainer():
+    STAGE_NAME = "Model Training"
+    try:
+        logger.info(f">>>>> Starting stage: {STAGE_NAME} <<<<<")
+        obj = ModelTrainerPipeline()
+        obj.train_model()
+        logger.info(f">>>>> Completed stage: {STAGE_NAME} <<<<<")
+    except Exception as e:
+        raise e
+    
 def main():
     data_ingestion()
     data_validation()
     data_transformation()
+    model_trainer()
 
 if __name__ == "__main__":
     main()
