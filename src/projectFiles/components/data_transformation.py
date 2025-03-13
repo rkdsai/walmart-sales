@@ -177,7 +177,7 @@ class DataTransformation:
 
     def push_to_s3(self):
         s3 = boto3.client('s3')
-        bucket_name = "walmart-sales-forecast-proj"
+        bucket_name = "walmart-sales-rkdsai-bucket"
         object_path = Path("artifacts/data_transformation/final_train_data.csv")
         key = "train_data.csv"
 
