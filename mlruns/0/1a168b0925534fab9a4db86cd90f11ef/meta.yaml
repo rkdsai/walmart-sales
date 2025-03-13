@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/dell/Documents/mlops/walmart-sales/mlruns/0/1a168b0925534fab9a4db86cd90f11ef/artifacts
+end_time: 1741864761553
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1a168b0925534fab9a4db86cd90f11ef
+run_name: charming-wren-789
+run_uuid: 1a168b0925534fab9a4db86cd90f11ef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741864751659
+status: 3
+tags: []
+user_id: dell

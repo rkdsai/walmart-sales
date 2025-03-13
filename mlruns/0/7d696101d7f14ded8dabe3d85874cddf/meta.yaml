@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/dell/Documents/mlops/walmart-sales/mlruns/0/7d696101d7f14ded8dabe3d85874cddf/artifacts
+end_time: 1741865072574
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d696101d7f14ded8dabe3d85874cddf
+run_name: silent-doe-540
+run_uuid: 7d696101d7f14ded8dabe3d85874cddf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741865066546
+status: 3
+tags: []
+user_id: dell

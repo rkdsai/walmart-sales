@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/dell/Documents/mlops/walmart-sales/mlruns/0/23e22ff87278410babc9b70039ad8dc7/artifacts
+end_time: 1741866698361
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 23e22ff87278410babc9b70039ad8dc7
+run_name: orderly-steed-371
+run_uuid: 23e22ff87278410babc9b70039ad8dc7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741866692575
+status: 3
+tags: []
+user_id: dell

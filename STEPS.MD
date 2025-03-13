@@ -139,3 +139,68 @@ updated
 4. Update the pipeline 
 5. Update the main.py
 
+## MLflow and S3 Integrated Workflow
+
+```plaintext
+                                                Start
+                                                  │
+    ┌───────────────────────────────────────────────┐
+    │ Load Configuration Files                      │
+    │ (config.yaml, params.yaml, schema.yaml)       │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Data Ingestion                                │
+    │ - Check if file exists locally               │
+    │ - If not, download from **AWS S3** bucket    │
+    │ - Extract raw data (features.csv, stores.csv,│
+    │   train.csv, test.csv)                        │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Data Validation                              │
+    │ - Validate data schema from **schema.yaml**  │
+    │ - Check missing/null values                  │
+    │ - Log validation results to **MLflow**       │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Data Transformation                          │
+    │ - Process & merge feature, store, train data │
+    │ - Apply feature engineering                  │
+    │ - Save transformed data to **S3**            │
+    │ - Log transformation steps in **MLflow**     │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Model Training                               │
+    │ - Load transformed data                      │
+    │ - Train **LGBMRegressor** model              │
+    │ - Log parameters, metrics & artifacts        │
+    │   (model.pkl, feature importance) in **MLflow** │
+    │ - Save trained model to **S3**               │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Model Evaluation                             │
+    │ - Load test data                             │
+    │ - Evaluate model performance                 │
+    │ - Log evaluation metrics (RMSE, MAPE, R²)   │
+    │   in **MLflow**                              │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+    ┌───────────────────────────────────────────────┐
+    │ Model Deployment (Optional)                  │
+    │ - Register best model in **MLflow Model Reg.**│
+    │ - Deploy model using API                     │
+    │ - Store model artifacts in **S3**            │
+    └───────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+                                                End

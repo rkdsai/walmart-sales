@@ -4,6 +4,7 @@ from projectFiles.pipeline.stage2_data_validation import DataValidationPipeline
 from projectFiles.pipeline.stage3_data_transformation import DataTransformationPipeline
 from projectFiles.pipeline.stage4_model_trainer import ModelTrainerPipeline
 from projectFiles.pipeline.stage5_model_evaluation import ModelEvaluationPipeline
+from projectFiles.pipeline.simulation import run_sim
 
 
 def data_ingestion():
@@ -56,12 +57,22 @@ def model_evaluation():
     except Exception as e:
         raise e
     
+def run_simulation():
+    STAGE_NAME = "Simulation"
+    try:
+        logger.info(f">>>>> Starting stage: {STAGE_NAME} <<<<<")
+        run_sim()
+        logger.info(f">>>>> Completed stage: {STAGE_NAME} <<<<<")
+    except Exception as e:
+        raise e
+    
 def main():
     data_ingestion()
     data_validation()
     data_transformation()
     model_trainer()
     model_evaluation()
+    run_simulation()
 
 if __name__ == "__main__":
     main()
